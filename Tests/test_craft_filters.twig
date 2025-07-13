@@ -1,0 +1,61 @@
+{# Test des filtres Craft CMS #}
+
+{# Filtres de chaînes #}
+{{ "hello world" | camel }}
+{{ "HelloWorld" | kebab }}
+{{ "hello_world" | pascal }}
+{{ "HELLO" | lcfirst }}
+{{ text | ascii }}
+{{ html | purify }}
+{{ title | widont }}
+
+{# Filtres de formatage #}
+{{ price | currency('USD') }}
+{{ number | percentage }}
+{{ fileSize | filesize }}
+{{ value | boolean }}
+
+{# Filtres de dates #}
+{{ entry.postDate | datetime('short') }}
+{{ date | atom }}
+{{ date | rss }}
+{{ date | httpdate }}
+{{ startDate | diff(endDate) }}
+
+{# Filtres d'encodage #}
+{{ data | base64_encode }}
+{{ encoded | base64_decode }}
+{{ content | hash }}
+{{ secret | encenc }}
+
+{# Filtres de traduction #}
+{{ "Hello" | t('app') }}
+{{ message | translate }}
+
+{# Filtres de manipulation #}
+{{ array | append(item) }}
+{{ array | prepend(item) }}
+{{ array | unshift(item) }}
+{{ array | push(item) }}
+{{ array | without(['a', 'b']) }}
+{{ array | withoutKey('foo') }}
+{{ array | intersect(otherArray) }}
+{{ array | unique }}
+{{ array | values }}
+
+{# Filtres de requête #}
+{{ entries | group('section.handle') }}
+{{ assets | indexBy('filename') }}
+{{ elements | where('title', 'contains', 'Craft') }}
+
+{# Filtres HTML/Attributs #}
+{{ classes | explodeClass }}
+{{ styles | explodeStyle }}
+{{ attrs | parseAttr }}
+{{ content | parseRefs }}
+{{ id | namespaceInputId }}
+{{ name | namespaceInputName }}
+{{ content | ns }}
+
+{# Alias #}
+{{ content | md }}  {# alias pour markdown #}

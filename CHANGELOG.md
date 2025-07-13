@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2025-07-13
+
+### Added
+- Comprehensive Craft CMS filter support (camel, kebab, currency, datetime, etc.)
+- Test file for Craft CMS specific filters
+- Improved filter styling (now uses function style instead of processing)
+
+### Fixed
+- Filter recognition was showing in italic red - now displays with proper function styling
+
 ## [0.1.0] - 2025-07-13
 
 ### Added

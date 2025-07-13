@@ -28,8 +28,10 @@
 ; Variables and identifiers
 (variable) @identifier
 
-; Filters and functions
-(filter_identifier) @function
+; Filters - use function capture for consistent styling
+(filter_identifier) @identifier.function
+
+; Functions
 (function_identifier) @function
 (test) @function
 
@@ -92,6 +94,24 @@
     "~" "??" "?:" ".."
 ] @operator
 
-; Common Twig filter names (high priority)
-((filter_identifier) @function
-  (#match? @function "^(upper|lower|capitalize|truncate|length|default|escape|join|date|number_format|abs|batch|first|last|merge|raw|reverse|slice|sort|split|trim|replace)$"))
+; Try to capture the entire filter expression
+(filter) @method
+
+; Twig standard filters
+((filter_identifier) @identifier.function
+  (#match? @identifier.function "^(abs|batch|capitalize|column|convert_encoding|country_name|currency_name|data_uri|date|date_modify|default|escape|filter|first|format|html_to_markdown|inky_to_html|inline_css|join|json_encode|keys|language_name|last|length|locale_name|lower|map|markdown_to_html|merge|nl2br|number_format|raw|reduce|replace|reverse|round|slice|slug|sort|spaceless|split|striptags|timezone_name|title|trim|u|upper|url_encode)$"))
+
+; Craft CMS specific filters  
+((filter_identifier) @identifier.function
+  (#match? @identifier.function "^(address|append|ascii|atom|base64_decode|base64_encode|boolean|camel|camelize|column|contains|currency|date|datetime|diff|duration|encenc|explodeClass|explodeStyle|filesize|filter|float|group|hash|httpdate|id|index|indexBy|integer|intersect|json_decode|json_encode|kebab|lcfirst|literal|markdown|md|merge|money|multisort|namespace|namespaceInputId|namespaceInputName|ns|number|parseAttr|parseRefs|pascal|percentage|prepend|purify|push|removeClass|replace|rss|snake|string|time|timestamp|translate|t|truncate|ucfirst|ucwords|underscored|unique|unshift|values|where|widont|without|withoutKey)$"))
+
+; Alternative approach: mark the pipe and following identifier
+((output_directive
+  "|" @operator
+  . (filter
+      (filter_identifier) @method)))
+
+; Mark filter with arguments
+((filter
+  (filter_identifier) @method
+  (arguments) @method.arguments))

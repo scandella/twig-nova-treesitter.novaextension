@@ -17,7 +17,8 @@ A comprehensive Tree-sitter based Twig template syntax extension for Nova editor
 - Advanced tags: `autoescape`, `apply`, `verbatim`, `cache`, `spaceless`
 
 ### 🔧 **Filter Recognition**
-- All common Twig filters: `upper`, `lower`, `capitalize`, `truncate`, `date`, `default`, `escape`, `join`, `length`, `merge`, `raw`, `reverse`, `slice`, `sort`, `split`, `trim`, `replace`, etc.
+- **All standard Twig filters**: `upper`, `lower`, `capitalize`, `truncate`, `date`, `default`, `escape`, `join`, `length`, `merge`, `raw`, `reverse`, `slice`, `sort`, `split`, `trim`, `replace`, etc.
+- **Craft CMS specific filters**: `camel`, `kebab`, `pascal`, `currency`, `filesize`, `datetime`, `hash`, `base64_encode`, `translate` (`t`), `append`, `prepend`, `where`, `group`, `indexBy`, `widont`, `parseRefs`, and many more
 - Filter chaining with pipe operator `|`
 - Filter arguments with proper syntax highlighting
 
