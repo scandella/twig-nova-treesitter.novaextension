@@ -1,0 +1,12 @@
+{
+  "identifier": "com.scandella.twig-treesitter",
+  "name": "Twig Tree-sitter",
+  "organization": "Scandella", 
+  "description": "Tree-sitter based syntax highlighting and completions for Twig template files",
+  "version": "0.1.0",
+  "categories": ["languages"],
+  "license": "MIT",
+  "repository": "https://github.com/yourusername/twig-nova-treesitter",
+  "bugs": "https://github.com/yourusername/twig-nova-treesitter/issues",
+  "main": "main.js"
+}
