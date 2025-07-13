@@ -9,3 +9,4 @@ yarn-error.log*
 !src/
 !lib/
 !Syntaxes/*.dylib
+.nova/Configuration.json
