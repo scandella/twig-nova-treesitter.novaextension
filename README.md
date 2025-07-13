@@ -1,6 +1,6 @@
 # Twig Tree-sitter for Nova
 
-A comprehensive Tree-sitter based Twig template syntax extension for Nova editor.
+A comprehensive Tree-sitter based Twig template syntax extension for Nova editor. But not tested…
 
 ## Features
 
