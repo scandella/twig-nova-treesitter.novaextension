@@ -8,5 +8,5 @@
   "license": "MIT",
   "repository": "https://github.com/yourusername/twig-nova-treesitter",
   "bugs": "https://github.com/yourusername/twig-nova-treesitter/issues",
-  "main": "main.js"
+  "main": "Scripts/main.js"
 }
