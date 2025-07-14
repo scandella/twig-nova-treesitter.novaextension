@@ -2,6 +2,7 @@
 
 Twig template syntax extension for Nova editor with Craft CMS support. Should work in Nova 13.
 
+
 ## Features
 
 ### 🎨 **Rich Syntax Highlighting**
