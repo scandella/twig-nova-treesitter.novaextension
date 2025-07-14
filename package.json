@@ -1,0 +1,37 @@
+{
+  "name": "twig-nova-treesitter",
+  "version": "0.1.2",
+  "description": "Tree-sitter based Twig syntax support for Nova",
+  "main": "src/index.js",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "build": "npm run generate && npm run compile",
+    "compile": "npm run compile:arm64 && npm run compile:x86_64 && npm run lipo",
+    "compile:arm64": "cc -arch arm64 -shared -fPIC -I./src src/parser.c -o lib/libtree-sitter-twig-arm64.dylib",
+    "compile:x86_64": "cc -arch x86_64 -shared -fPIC -I./src src/parser.c -o lib/libtree-sitter-twig-x86_64.dylib",
+    "lipo": "mkdir -p Syntaxes && lipo -create lib/libtree-sitter-twig-arm64.dylib lib/libtree-sitter-twig-x86_64.dylib -output Syntaxes/libtree-sitter-twig.dylib"
+  },
+  "keywords": [
+    "tree-sitter",
+    "twig",
+    "nova",
+    "parser"
+  ],
+  "author": "Scandella",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.twig",
+      "file-types": [
+        "twig-html"
+      ]
+    }
+  ]
+}

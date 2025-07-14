@@ -1,0 +1,21 @@
+{# Test filtres Twig #}
+
+{{ name | upper }}
+{{ text | lower }}
+{{ content | truncate(50) }}
+{{ items | length }}
+{{ value | default('N/A') }}
+{{ html | escape }}
+{{ list | join(', ') }}
+{{ date | date('Y-m-d') }}
+{{ price | number_format(2) }}
+{{ content | raw }}
+
+{# Filtres chainés #}
+{{ name | upper | truncate(10) }}
+{{ list | reverse | first }}
+
+{# Filtres avec arguments #}
+{{ text | slice(0, 100) }}
+{{ items | batch(3) }}
+{{ string | replace('old', 'new') }}

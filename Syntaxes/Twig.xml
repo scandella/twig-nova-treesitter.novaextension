@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="twig">
+    <meta>
+        <name>Twig-HTML</name>
+        <type>markup</type>
+        <preferred-file-extension>twig</preferred-file-extension>
+    </meta>
+    
+    <detectors>
+        <extension priority="1.0">twig</extension>
+        <extension priority="0.5">html.twig</extension>
+    </detectors>
+    
+    <tree-sitter language="twig">
+        <highlights path="highlights.scm" />
+        <folds path="folds.scm" />
+        <symbols path="symbols.scm" />
+        <locals path="locals.scm" />
+        <injections path="injections.scm" />
+    </tree-sitter>
+</syntax>

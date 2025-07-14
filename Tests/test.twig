@@ -1,0 +1,66 @@
+{# Test template for Twig syntax highlighting #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title | default('Welcome') }}</title>
+<style>
+.test {background-color: red;}
+</style>
+</head>
+<body>
+    {% if user %}
+        <h1>Hello {{ user.name }}!</h1>
+        {% set myVarible %}
+        {% endset %}
+        {% for item in items %}
+            <div class="item">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.description | truncate(100) }}</p>
+                {% if item.active %}
+                    <span class="active">Active</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Please log in.</p>
+        {{ test|coin }}
+    {% endif %}
+    
+    {% set total = 0 %}
+    {% for product in products %}
+        {% set total = total + product.price %}
+    {% endfor %}
+    
+    <p>Total: {{ total | currency }}</p>
+    
+    {% block content %}
+        Default content
+    {% endblock %}
+    
+    {% macro render_field(field) %}
+        <div class="field">
+            <label>{{ field.label }}</label>
+            <input type="{{ field.type }}" name="{{ field.name }}" value="{{ field.value }}">
+        </div>
+    {% endmacro %}
+    
+    {{ render_field({
+        label: 'Name',
+        type: 'text',
+        name: 'username',
+        value: user.name ?? ''
+    }) }}
+    
+    {% cache "global" for 1 hour %}
+        <div>Cached content</div>
+    {% endcache %}
+    
+    {% js %}
+        console.log('Hello from Twig!');
+    {% endjs %}
+    
+    {% css %}
+        .test { color: red; }
+    {% endcss %}
+</body>
+</html>
