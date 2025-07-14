@@ -1,8 +1,8 @@
 {
   "identifier": "scandella.twig-treesitter",
-  "name": "Twig Tree-sitter",
+  "name": "Twig for Nova 13",
   "organization": "Scandella", 
-  "description": "Syntax highlighting for Twig template files",
+  "description": "Twig template syntax extension for Nova editor with Craft CMS support",
   "version": "0.1.4",
   "categories": ["languages"],
   "license": "MIT",

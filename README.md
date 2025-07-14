@@ -1,6 +1,7 @@
-# Twig Tree-sitter for Nova
+# Twig for Nova 13
 
-Twig template syntax extension for Nova editor with Craft CMS support. Should work in Nova 13.
+Twig template syntax extension for Nova editor with Craft CMS support.
+As the title say, should work in Nova 13.
 
 
 ## Features
