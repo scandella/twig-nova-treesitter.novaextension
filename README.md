@@ -1,6 +1,6 @@
 # Twig Tree-sitter for Nova
 
-A comprehensive Tree-sitter based Twig template syntax extension for Nova editor. But not tested…
+Twig template syntax extension for Nova editor with Craft CMS support. Should work in Nova 13.
 
 ## Features
 
@@ -24,12 +24,6 @@ A comprehensive Tree-sitter based Twig template syntax extension for Nova editor
 - **JavaScript blocks**: Full syntax highlighting for `{% js %}...{% endjs %}`
 - **CSS blocks**: Full syntax highlighting for `{% css %}...{% endcss %}`
 - Complete JavaScript and CSS language injection
-
-### 📝 **Editor Features**
-- **Code folding**: Block structures, comments, JS/CSS blocks
-- **Symbol navigation**: Macros, variables, blocks
-- **Local scopes**: Variable definitions and references
-- **HTML injection**: Template content with HTML highlighting
 
 ## Installation
 
