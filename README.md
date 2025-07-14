@@ -172,4 +172,3 @@ MIT License - see LICENSE file for details.
 ## Acknowledgments
 
 - Built on the excellent [gbprod/tree-sitter-twig](https://github.com/gbprod/tree-sitter-twig) grammar
-- Inspired by Nova's Tree-sitter documentation and examples
