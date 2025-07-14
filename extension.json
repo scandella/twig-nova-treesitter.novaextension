@@ -3,7 +3,7 @@
   "name": "Twig for Nova 13",
   "organization": "Scandella", 
   "description": "Twig template syntax extension for Nova editor with Craft CMS support",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "categories": ["languages"],
   "license": "MIT",
   "repository": "https://github.com/scandella/twig-nova-treesitter.novaextension",

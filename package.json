@@ -1,6 +1,6 @@
 {
   "name": "twig-nova-treesitter",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Twig syntax support for Nova",
   "main": "src/index.js",
   "scripts": {
